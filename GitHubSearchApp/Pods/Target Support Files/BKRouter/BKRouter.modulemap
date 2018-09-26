@@ -1,0 +1,6 @@
+framework module BKRouter {
+  umbrella header "BKRouter-umbrella.h"
+
+  export *
+  module * { export * }
+}
