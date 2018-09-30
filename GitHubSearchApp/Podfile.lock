@@ -1,7 +1,7 @@
 PODS:
   - Alamofire (4.7.3)
   - BKEventBus (1.0.7)
-  - BKRedux (1.0.0):
+  - BKRedux (1.0.1):
     - RxCocoa (>= 4.2.0)
     - RxSwift (>= 4.2.0)
   - BKRouter (0.0.2)
@@ -57,7 +57,7 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
   BKEventBus: 19835568d721ab6b9b6421ef7193506d8cfd6ee0
-  BKRedux: 58ca0c51e8a8c95b9fdea88a7c06c33a71f758f5
+  BKRedux: 3b281c069f42cc5f0ce51d8db0717dee6cb639e6
   BKRouter: 952411bf065f7acc9470652a36a2cfab5f00247a
   Kingfisher: 43c4b802d8b5256cf1f4379e9cd10b329be6d3e2
   Moya: a725035953bc1c0eb1be505ab903984501d82440
