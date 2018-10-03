@@ -1,6 +1,6 @@
 # GitHubSearch
 
-GitHubSearch is an example for ReactComponentKit. It searches github's user or repositories. 
+GitHubSearch is an example for ReactComponentKit. It searches github's users or repositories. 
 
 ## Before Build
 
