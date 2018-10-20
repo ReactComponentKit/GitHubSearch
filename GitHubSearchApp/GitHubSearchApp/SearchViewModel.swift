@@ -51,13 +51,22 @@ struct SearchState: State {
 
 class SearchViewModel: RootViewModelType<SearchState> {
     
-    let rx_viewState = BehaviorRelay<SearchState.ViewState>(value: .hello)
-    let rx_sections = BehaviorRelay<[SectionModel]>(value: [])
-    let rx_route = BehaviorRelay<String?>(value: nil)
+    struct Output {
+        let viewState = BehaviorRelay<SearchState.ViewState>(value: .hello)
+        let sections = BehaviorRelay<[SectionModel]>(value: [])
+        let route = BehaviorRelay<String?>(value: nil)
+        
+        fileprivate init() {
+        }
+    }
+    
+    lazy var output: Output = {
+        return Output()
+    }()
     
     override init() {
         super.init()
-        
+    
         store.set(initailState: SearchState(),
                 middlewares: [
                     logActionToConsole,
@@ -82,7 +91,7 @@ class SearchViewModel: RootViewModelType<SearchState> {
     override func beforeDispatch(action: Action) -> Action {
         guard let state = store.state as? SearchState else { return VoidAction() }
         
-        rx_viewState.accept(viewState(for: action))
+        output.viewState.accept(viewState(for: action))
         
         switch action {
         case let act as InputSearchKeywordAction:
@@ -114,13 +123,13 @@ class SearchViewModel: RootViewModelType<SearchState> {
     }
     
     override func on(newState: SearchState) {
-        rx_sections.accept(newState.sections)
-        rx_viewState.accept(newState.viewState)
-        rx_route.accept(newState.route)
+        output.sections.accept(newState.sections)
+        output.viewState.accept(newState.viewState)
+        output.route.accept(newState.route)
     }
     
     override func on(error: Error, action: Action) {
-        rx_viewState.accept(.error(action: action))
+        output.viewState.accept(.error(action: action))
     }
     
     func showEmptyView() {
