@@ -128,7 +128,7 @@ class SearchViewModel: RootViewModelType<SearchState> {
         output.route.accept(newState.route)
     }
     
-    override func on(error: Error, action: Action) {
+    override func on(error: Error, action: Action, onState: SearchState) {
         output.viewState.accept(.error(action: action))
     }
     

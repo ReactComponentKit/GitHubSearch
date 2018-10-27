@@ -1,7 +1,7 @@
 PODS:
   - Alamofire (4.7.3)
   - BKEventBus (1.0.8)
-  - BKRedux (1.0.2):
+  - BKRedux (1.1.0):
     - RxCocoa (>= 4.2.0)
     - RxSwift (>= 4.2.0)
   - BKRouter (0.0.2)
@@ -20,7 +20,7 @@ PODS:
   - RxCocoa (4.3.1):
     - RxSwift (~> 4.0)
   - RxSwift (4.3.1)
-  - SnapKit (4.0.1)
+  - SnapKit (4.2.0)
   - YYCache (1.0.4)
   - YYImage (1.0.4):
     - YYImage/Core (= 1.0.4)
@@ -57,7 +57,7 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
   BKEventBus: b6ec629c0581c98a9c798f930aadd92b751a3f6b
-  BKRedux: 41c7637061babc0ee1ac5f5121db9d302e786d79
+  BKRedux: 1cd8225d6f74b61a76209bed5f88a7773e401f93
   BKRouter: 952411bf065f7acc9470652a36a2cfab5f00247a
   Kingfisher: 43c4b802d8b5256cf1f4379e9cd10b329be6d3e2
   Moya: a725035953bc1c0eb1be505ab903984501d82440
@@ -65,7 +65,7 @@ SPEC CHECKSUMS:
   Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
   RxCocoa: 78763c7b07d02455598d9fc3c1ad091a28b73635
   RxSwift: fe0fd770a43acdb7d0a53da411c9b892e69bb6e4
-  SnapKit: 0de968a9fec17499afa29683b05d0c775b6d1c29
+  SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
   YYCache: 8105b6638f5e849296c71f331ff83891a4942952
   YYImage: 1e1b62a9997399593e4b9c4ecfbbabbf1d3f3b54
   YYWebImage: 5f7f36aee2ae293f016d418c7d6ba05c4863e928
