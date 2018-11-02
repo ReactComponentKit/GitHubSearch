@@ -67,7 +67,7 @@ class SearchViewModel: RootViewModelType<SearchState> {
     override init() {
         super.init()
     
-        store.set(initailState: SearchState(),
+        store.set(initialState: SearchState(),
                 middlewares: [
                     logActionToConsole,
                     SearchView.resetSomeState,
