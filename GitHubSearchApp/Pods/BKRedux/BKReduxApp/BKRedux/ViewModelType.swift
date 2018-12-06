@@ -52,6 +52,10 @@ open class ViewModelType<S: State> {
             .disposed(by: disposeBag)
     }
     
+    public func dispatch(action: Action) {
+        rx_action.accept(action)
+    }
+    
     open func beforeDispatch(action: Action) -> Action {
         return action
     }
