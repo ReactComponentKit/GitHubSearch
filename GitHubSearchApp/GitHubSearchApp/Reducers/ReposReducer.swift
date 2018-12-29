@@ -11,28 +11,27 @@ import BKRedux
 import RxSwift
 
 extension SearchView {
-    static func reposReducer<S>(name: StateKeyPath<S>, state: StateValue?) -> (Action) -> Observable<(StateKeyPath<S>, StateValue?)> {
-        return { (action) in
-            guard
-                let prevRepoList = state as? [Repo],
-                let searchRepoAction = action as? SearchReposAction
-            else {
-                return .just((name, state))
-            }
-            
-            if searchRepoAction.keyword.isEmpty {
-                return .just((name, []))
-            }
-            
-            let repos = GitHubSearchServiceProvider.searchRepos(name: searchRepoAction.keyword,
-                                                                page: searchRepoAction.page,
-                                                                perPage: searchRepoAction.perPage,
-                                                                sort: searchRepoAction.sort).asObservable()
-            
-            return repos.map({ (repoList) in
-                return (name, prevRepoList + repoList)
-            }).asObservable()
+    static func reposReducer(state: State, action: Action) -> Observable<State> {
+        guard
+            var mutableState = state as? SearchState,
+            let searchRepoAction = action as? SearchReposAction
+        else {
+            return .just(state)
         }
+        
+        if searchRepoAction.keyword.isEmpty {
+            return .just(state)
+        }
+        
+        let repos = GitHubSearchServiceProvider.searchRepos(name: searchRepoAction.keyword,
+                                                            page: searchRepoAction.page,
+                                                            perPage: searchRepoAction.perPage,
+                                                            sort: searchRepoAction.sort).asObservable()
+        
+        return repos.map({ (repoList) in
+            mutableState.repos += repoList
+            return mutableState
+        }).asObservable()
     }
 }
 
