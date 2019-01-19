@@ -19,27 +19,27 @@ class SearchViewController: UIViewController {
     private let viewModel = SearchViewModel()
 
     private lazy var searchControllerComponent: SearchControllerComponent = {
-        return SearchControllerComponent(token: viewModel.token, canOnlyDispatchAction: true)
+        return SearchControllerComponent(token: viewModel.token, receiveState: false)
     }()
     
     private lazy var helloComponent: HelloViewControllerComponent = {
-        return HelloViewControllerComponent(token: viewModel.token, canOnlyDispatchAction: true)
+        return HelloViewControllerComponent(token: viewModel.token, receiveState: false)
     }()
     
     private lazy var emptyComponent: EmptyViewControllerComponent = {
-        return EmptyViewControllerComponent(token: viewModel.token, canOnlyDispatchAction: true)
+        return EmptyViewControllerComponent(token: viewModel.token, receiveState: false)
     }()
     
     private lazy var errorComponent: ErrorViewControllerComponent = {
-        return ErrorViewControllerComponent(token: viewModel.token, canOnlyDispatchAction: true)
+        return ErrorViewControllerComponent(token: viewModel.token, receiveState: false)
     }()
     
     private lazy var loadingComponent: LoadingViewControllerComponent = {
-        return LoadingViewControllerComponent(token: viewModel.token, canOnlyDispatchAction: true)
+        return LoadingViewControllerComponent(token: viewModel.token, receiveState: false)
     }()
     
     private lazy var tableViewComponent: UITableViewComponent = {
-        let component = UITableViewComponent(token: viewModel.token, canOnlyDispatchAction: true)
+        let component = UITableViewComponent(token: viewModel.token, receiveState: false)
         component.tableView.showsVerticalScrollIndicator = false
         return component
     }()

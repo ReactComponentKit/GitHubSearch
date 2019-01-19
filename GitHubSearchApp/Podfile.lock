@@ -1,22 +1,22 @@
 PODS:
-  - Alamofire (4.8.0)
-  - BKEventBus (1.0.8)
-  - BKRedux (1.2.1):
+  - Alamofire (4.8.1)
+  - BKEventBus (1.0.9)
+  - BKRedux (1.2.2):
     - RxCocoa (>= 4.2.0)
     - RxSwift (>= 4.2.0)
   - BKRouter (0.0.2)
-  - Kingfisher (5.0.1)
+  - Kingfisher (5.1.0)
   - Moya (12.0.1):
     - Moya/Core (= 12.0.1)
   - Moya/Core (12.0.1):
     - Alamofire (~> 4.1)
     - Result (~> 4.0)
-  - ReactComponentKit (0.3.4):
+  - ReactComponentKit (1.0.2):
     - BKEventBus (>= 1.0.7)
     - BKRedux (>= 1.0.0)
     - RxCocoa (>= 4.2.0)
     - RxSwift (>= 4.2.0)
-  - Result (4.0.0)
+  - Result (4.1.0)
   - RxAtomic (4.4.0)
   - RxCocoa (4.4.0):
     - RxSwift (~> 4.0)
@@ -58,14 +58,14 @@ SPEC REPOS:
     - YYWebImage
 
 SPEC CHECKSUMS:
-  Alamofire: 3ec537f71edc9804815215393ae2b1a8ea33a844
-  BKEventBus: b6ec629c0581c98a9c798f930aadd92b751a3f6b
-  BKRedux: 98566aa52ccc971ff3f406ac996689d36aebc083
+  Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
+  BKEventBus: c18a022d313e766f65fcbec073b254db4ac555b7
+  BKRedux: d5d82c3e5fb98915ff03c078651205aa324fbf44
   BKRouter: 952411bf065f7acc9470652a36a2cfab5f00247a
-  Kingfisher: 4f771421b9208185217550528a06fd48756cb7c2
+  Kingfisher: fcec238063d17404fca89bf0a850583211c4cbf6
   Moya: cf730b3cd9e005401ef37a85143aa141a12fd38f
-  ReactComponentKit: 66cfcf5ee82332b1715cc96ecfb6addb0ab21cc9
-  Result: 7645bb3f50c2ce726dd0ff2fa7b6f42bbe6c3713
+  ReactComponentKit: 630227e154334ebc793a57e8d11100ac6e0ce1dc
+  Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
   RxAtomic: eacf60db868c96bfd63320e28619fe29c179656f
   RxCocoa: df63ebf7b9a70d6b4eeea407ed5dd4efc8979749
   RxSwift: 5976ecd04fc2fefd648827c23de5e11157faa973

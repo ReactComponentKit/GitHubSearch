@@ -27,7 +27,7 @@ class LoadMoreComponent: UIViewComponent {
         indicator.startAnimating()
     }
     
-    override func configure<Item>(item: Item) {
+    override func configure<Item>(item: Item, at indexPath: IndexPath) {
         indicator.startAnimating()
         dispatch(action: LoadMoreAction())
     }

@@ -125,7 +125,7 @@ class UserItemComponent: UIViewComponent {
         }.disposed(by: disposeBag)
     }
     
-    override func configure<Item>(item: Item) {
+    override func configure<Item>(item: Item, at indexPath: IndexPath) {
         guard let userItem = item as? UserItemModel else { return }
         self.htmlUrl = userItem.user.htmlUrl
         self.nameLabel.text = userItem.user.name ?? userItem.user.login
