@@ -89,7 +89,7 @@ class SearchViewModel: RootViewModelType<SearchState> {
     }
     
     override func beforeDispatch(action: Action) -> Action {
-        guard let state = store.state else { return VoidAction() }
+        let state = store.state
         
         output.viewState.accept(viewState(for: action))
         
@@ -128,7 +128,7 @@ class SearchViewModel: RootViewModelType<SearchState> {
         output.route.accept(newState.route)
     }
     
-    override func on(error: Error, action: Action, onState: SearchState) {
+    override func on(error: Error, action: Action) {
         output.viewState.accept(.error(action: action))
     }
     
@@ -137,7 +137,7 @@ class SearchViewModel: RootViewModelType<SearchState> {
     }
     
     private func viewState(for action: Action) -> SearchState.ViewState {
-        guard let state = store.state else { return .hello }
+        let state = store.state
         
         let hasContent = state.sections.isEmpty == false
         

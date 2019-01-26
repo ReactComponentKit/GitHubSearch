@@ -17,6 +17,10 @@ open class UIViewControllerComponent: UIViewController, ReactComponent {
     
     public var token: Token
     
+    public static func viewControllerComponent(identifier: String, storyboard: UIStoryboard) -> UIViewControllerComponent {
+        return storyboard.instantiateViewController(withIdentifier: identifier) as! UIViewControllerComponent
+    }
+        
     public required init(token: Token, receiveState: Bool = true) {
         self.token = token
         self.dispatchEventBus = EventBus(token: token)
@@ -34,7 +38,27 @@ open class UIViewControllerComponent: UIViewController, ReactComponent {
     }
     
     public required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        self.token = Token.empty
+        dispatchEventBus = EventBus(token: Token.empty)
+        newStateEventBus = nil
+        super.init(coder: aDecoder)
+    }
+    
+    // Used for nib view controller
+    public func reset(token: Token, receiveState: Bool = true) {
+        guard token != Token.empty else { return }
+        self.token = token
+        self.dispatchEventBus = EventBus(token: token)
+        if receiveState == true {
+            self.newStateEventBus = EventBus(token: token)
+        }
+        newStateEventBus?.on { [weak self] (event) in
+            guard let strongSelf = self else { return }
+            switch event {
+            case let .on(state):
+                strongSelf.applyNew(state: state)
+            }
+        }
     }
     
     private func applyNew(state: State) {
