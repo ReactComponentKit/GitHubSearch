@@ -24,13 +24,29 @@ struct SearchState: State {
         case repo
     }
     
-    enum ViewState {
+    enum ViewState: Equatable {
         case hello
         case loading
         case loadingIncicator
         case empty
         case list
         case error(action: Action)
+        static func == (lhs: SearchState.ViewState, rhs: SearchState.ViewState) -> Bool {
+            switch (lhs, rhs) {
+            case (.hello, .hello):
+                return true
+            case (.loading, loading):
+                return true
+            case (.loadingIncicator, loadingIncicator):
+                return true
+            case (.empty, empty):
+                return true
+            case (.list, list):
+                return true
+            default:
+                return false
+            }
+        }
     }
     
     var searchScope: SearchScope = .user
@@ -44,24 +60,24 @@ struct SearchState: State {
     var userSort: GitHubSearchService.UserSort = .repositories
     var repos: [Repo] = []
     var repoSort: GitHubSearchService.RepoSort = .stars
-    var sections: [SectionModel] = []
+    var sections: [DefaultSectionModel] = []
     var route: String? = nil
     var error: (Error, Action)? = nil
 }
 
 class SearchViewModel: RootViewModelType<SearchState> {
     
-    struct Output {
-        let viewState = BehaviorRelay<SearchState.ViewState>(value: .hello)
-        let sections = BehaviorRelay<[SectionModel]>(value: [])
-        let route = BehaviorRelay<String?>(value: nil)
+    struct Outputs {
+        let viewState = Output<SearchState.ViewState>(value: .hello)
+        let sections = Output<[DefaultSectionModel]>(value: [])
+        let route = Output<String?>(value: nil)
         
         fileprivate init() {
         }
     }
     
-    lazy var output: Output = {
-        return Output()
+    lazy var output: Outputs = {
+        return Outputs()
     }()
     
     override init() {

@@ -79,19 +79,25 @@ class SearchViewController: UIViewController {
     }
     
     private func bindingViewModel() {
-        viewModel.output.viewState
+        viewModel
+            .output
+            .viewState
             .asDriver()
             .drive(onNext: handle(viewState:))
             .disposed(by: disposeBag)
         
-        viewModel.output.sections
+        viewModel
+            .output
+            .sections
             .asDriver()
             .drive(onNext: { [weak self] (sectionModels) in
                 self?.tableViewAdapter.set(sections: sectionModels, with: .fade)
             })
             .disposed(by: disposeBag)
         
-        viewModel.output.route
+        viewModel
+            .output
+            .route
             .asDriver()
             .drive(onNext: { [weak self] (url) in
                 guard let strongSelf = self, let url = url else { return }

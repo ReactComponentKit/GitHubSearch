@@ -38,7 +38,7 @@ class SearchControllerComponent: UIViewControllerComponent {
             .searchBar
             .rx
             .text
-            .debounce(0.5, scheduler: MainScheduler.instance)
+            .debounce(DispatchTimeInterval.milliseconds(5), scheduler: MainScheduler.instance)
             .map {
                 InputSearchKeywordAction(keyword: $0 ?? "")
             }

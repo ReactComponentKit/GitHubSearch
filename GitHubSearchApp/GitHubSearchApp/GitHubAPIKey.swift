@@ -9,6 +9,6 @@
 import Foundation
 
 enum GitHubAPIKey {
-    static let client_id = ""
-    static let client_secret = ""
+    static let client_id = "6aa91974cdfea193f9cd"
+    static let client_secret = "35f3161972589a30ec06022737a055bbefc5aebb"
 }

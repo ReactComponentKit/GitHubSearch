@@ -16,7 +16,7 @@ extension SearchView {
         guard var mutableState = state as? SearchState else { return .just(state) }
         
         return Single.create(subscribe: { (single) -> Disposable in
-            let sectionModel: SectionModel
+            let sectionModel: DefaultSectionModel
             switch mutableState.searchScope {
             case .user:
                 sectionModel = makeUserSectionModel(users: mutableState.users)
@@ -38,12 +38,12 @@ extension SearchView {
     }
     
     
-    private static func makeUserSectionModel(users: [User]) -> SectionModel {
+    private static func makeUserSectionModel(users: [User]) -> DefaultSectionModel {
         let items = users.map(UserItemModel.init)
         return DefaultSectionModel(items: items)
     }
     
-    private static func makeRepoSectionModel(repos: [Repo]) -> SectionModel {
+    private static func makeRepoSectionModel(repos: [Repo]) -> DefaultSectionModel {
         let items = repos.map(RepoItemModel.init)
         return DefaultSectionModel(items: items)
     }

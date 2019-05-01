@@ -28,7 +28,7 @@ extension SearchView {
                                                             perPage: searchUserAction.perPage,
                                                             sort: searchUserAction.sort).asObservable()
         
-        return users.flatMap({ (userList: [User]) -> Observable<[User]> in
+        return users.flatMap({ (userList: [User]) -> Observable<User> in
             Observable.from(userList)
                 .flatMap({ (user: User) -> Observable<User> in
                     GitHubSearchServiceProvider.fetchUserRepoInfo(userName: user.login)
@@ -42,8 +42,10 @@ extension SearchView {
                             mutableUser.followingCount = repoInfo.followingCount
                             return mutableUser
                         })
-                }).toArray()
+                })
+                .asObservable()
             })
+            .toArray()
             .map({ (userList) in
                 mutableState.users += userList
                 return mutableState
