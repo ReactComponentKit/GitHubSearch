@@ -7,10 +7,9 @@
 //
 
 import Foundation
-import BKRedux
-import RxSwift
+import ReactComponentKit
 
-func logActionToConsole(state: State, action: Action) -> Observable<State> {
+func logAction(_ action: Action) -> Action {
     print("[Action] :: \(action)")
-    return .just(state)
+    return action
 }

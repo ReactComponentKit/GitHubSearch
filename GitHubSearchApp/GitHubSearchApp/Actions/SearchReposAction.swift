@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import BKRedux
+import ReactComponentKit
 
 struct SearchReposAction: Action {
     let keyword: String

@@ -7,26 +7,21 @@
 //
 
 import Foundation
-import BKRedux
+import ReactComponentKit
 import RxSwift
 
-extension SearchView {
-    static func usersReducer(state: State, action: Action) -> Observable<State> {
-        guard
-            var mutableState = state as? SearchState,
-            let searchUserAction = action as? SearchUsersAction
-        else {
-            return .just(state)
+extension SearchViewModel {
+    func searchUsersReducer(action: SearchUsersAction) -> Observable<SearchState> {
+        if action.keyword.isEmpty {
+            return withState { state in
+                return .just(state)
+            }
         }
         
-        if searchUserAction.keyword.isEmpty {
-            return .just(state)
-        }
-    
-        let users = GitHubSearchServiceProvider.searchUsers(name: searchUserAction.keyword,
-                                                            page: searchUserAction.page,
-                                                            perPage: searchUserAction.perPage,
-                                                            sort: searchUserAction.sort).asObservable()
+        let users = GitHubSearchServiceProvider.searchUsers(name: action.keyword,
+                                                            page: action.page,
+                                                            perPage: action.perPage,
+                                                            sort: action.sort).asObservable()
         
         return users.flatMap({ (userList: [User]) -> Observable<User> in
             Observable.from(userList)
@@ -46,9 +41,11 @@ extension SearchView {
                 .asObservable()
             })
             .toArray()
-            .map({ (userList) in
-                mutableState.users += userList
-                return mutableState
+            .map({ [weak self] (userList) in
+                guard let strongSelf = self else { return SearchState() }
+                return strongSelf.withState { state in
+                    state.copy { $0.users += userList }
+                }
             }).asObservable()
     }
 }

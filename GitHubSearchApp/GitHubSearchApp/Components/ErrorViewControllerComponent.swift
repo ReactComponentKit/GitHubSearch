@@ -8,7 +8,6 @@
 
 import UIKit
 import ReactComponentKit
-import BKRedux
 import RxSwift
 import RxCocoa
 

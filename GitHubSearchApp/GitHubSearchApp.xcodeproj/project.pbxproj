@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,8 +12,7 @@
 		4E1B8A82215B2F0100FCBA80 /* UIView+RxTap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1B8A81215B2F0100FCBA80 /* UIView+RxTap.swift */; };
 		4E1B8A84215B356B00FCBA80 /* ClickItemAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1B8A83215B356B00FCBA80 /* ClickItemAction.swift */; };
 		4E1B8A86215B39AA00FCBA80 /* SearchRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1B8A85215B39AA00FCBA80 /* SearchRoute.swift */; };
-		4E1B8A88215B44A700FCBA80 /* ResetSomeState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1B8A87215B44A700FCBA80 /* ResetSomeState.swift */; };
-		4E1B8A8A215B44E000FCBA80 /* MakeRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1B8A89215B44E000FCBA80 /* MakeRoute.swift */; };
+		4E1B8A8A215B44E000FCBA80 /* HandleClickItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1B8A89215B44E000FCBA80 /* HandleClickItem.swift */; };
 		4E1B8A8C215B4B2200FCBA80 /* GitHubAPIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1B8A8B215B4B2200FCBA80 /* GitHubAPIKey.swift */; };
 		4E1B8A8E215B4E3400FCBA80 /* AppDelegateRequiredValueChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1B8A8D215B4E3400FCBA80 /* AppDelegateRequiredValueChecker.swift */; };
 		4E51634A215A442100F58636 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E516349215A442100F58636 /* AppDelegate.swift */; };
@@ -27,7 +26,7 @@
 		4EE88448215A4D6C006BF00B /* AppDelegateRouteHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE88447215A4D6C006BF00B /* AppDelegateRouteHandler.swift */; };
 		4EE8844B215A4FB2006BF00B /* SearchControllerComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE8844A215A4FB2006BF00B /* SearchControllerComponent.swift */; };
 		4EE8844D215A5029006BF00B /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE8844C215A5029006BF00B /* SearchViewModel.swift */; };
-		4EE88455215A59AA006BF00B /* LogActionToConsole.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE88454215A59AA006BF00B /* LogActionToConsole.swift */; };
+		4EE88455215A59AA006BF00B /* logAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE88454215A59AA006BF00B /* logAction.swift */; };
 		4EE88457215A5A8F006BF00B /* SelectViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE88456215A5A8F006BF00B /* SelectViewState.swift */; };
 		4EE88459215A5ADC006BF00B /* ShowEmptyViewAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE88458215A5ADC006BF00B /* ShowEmptyViewAction.swift */; };
 		4EE8845C215A5CE0006BF00B /* GitHubSearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE8845B215A5CE0006BF00B /* GitHubSearchService.swift */; };
@@ -40,13 +39,12 @@
 		4EE8846B215A7BBF006BF00B /* LoadingViewControllerComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE8846A215A7BBF006BF00B /* LoadingViewControllerComponent.swift */; };
 		4EE8846D215A8AD2006BF00B /* ErrorViewControllerComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE8846C215A8AD2006BF00B /* ErrorViewControllerComponent.swift */; };
 		4EE8846F215A8C34006BF00B /* InputSearchKeywordAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE8846E215A8C34006BF00B /* InputSearchKeywordAction.swift */; };
-		4EE88471215A924E006BF00B /* UsersReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE88470215A924E006BF00B /* UsersReducer.swift */; };
+		4EE88471215A924E006BF00B /* SearchUsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE88470215A924E006BF00B /* SearchUsers.swift */; };
 		4EE88473215A9436006BF00B /* SearchUsersAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE88472215A9436006BF00B /* SearchUsersAction.swift */; };
 		4EE88475215A9455006BF00B /* SearchReposAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE88474215A9455006BF00B /* SearchReposAction.swift */; };
-		4EE88477215AA1A8006BF00B /* LogStateToConsole.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE88476215AA1A8006BF00B /* LogStateToConsole.swift */; };
 		4EE8847A215AA534006BF00B /* SearchUsersResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE88479215AA534006BF00B /* SearchUsersResponse.swift */; };
 		4EE8847C215AAAE5006BF00B /* SearchReposResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE8847B215AAAE5006BF00B /* SearchReposResponse.swift */; };
-		4EE8847E215AABD9006BF00B /* ReposReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE8847D215AABD9006BF00B /* ReposReducer.swift */; };
+		4EE8847E215AABD9006BF00B /* SearchRepos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE8847D215AABD9006BF00B /* SearchRepos.swift */; };
 		4EE88480215AAE61006BF00B /* MakeSectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE8847F215AAE61006BF00B /* MakeSectionModel.swift */; };
 		4EE88483215AAEDF006BF00B /* UserItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE88482215AAEDF006BF00B /* UserItemModel.swift */; };
 		4EE88485215AAEEF006BF00B /* RepoItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE88484215AAEEF006BF00B /* RepoItemModel.swift */; };
@@ -59,7 +57,6 @@
 		4EE88493215ABF5E006BF00B /* LoadMoreItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE88492215ABF5E006BF00B /* LoadMoreItemModel.swift */; };
 		4EE88495215AC132006BF00B /* LoadMoreAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE88494215AC132006BF00B /* LoadMoreAction.swift */; };
 		4EE88497215AC185006BF00B /* SetPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE88496215AC185006BF00B /* SetPage.swift */; };
-		4EE88499215AC402006BF00B /* ResetFlags.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE88498215AC402006BF00B /* ResetFlags.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,8 +74,7 @@
 		4E1B8A81215B2F0100FCBA80 /* UIView+RxTap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+RxTap.swift"; sourceTree = "<group>"; };
 		4E1B8A83215B356B00FCBA80 /* ClickItemAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClickItemAction.swift; sourceTree = "<group>"; };
 		4E1B8A85215B39AA00FCBA80 /* SearchRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRoute.swift; sourceTree = "<group>"; };
-		4E1B8A87215B44A700FCBA80 /* ResetSomeState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetSomeState.swift; sourceTree = "<group>"; };
-		4E1B8A89215B44E000FCBA80 /* MakeRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeRoute.swift; sourceTree = "<group>"; };
+		4E1B8A89215B44E000FCBA80 /* HandleClickItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandleClickItem.swift; sourceTree = "<group>"; };
 		4E1B8A8B215B4B2200FCBA80 /* GitHubAPIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubAPIKey.swift; sourceTree = "<group>"; };
 		4E1B8A8D215B4E3400FCBA80 /* AppDelegateRequiredValueChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateRequiredValueChecker.swift; sourceTree = "<group>"; };
 		4E516346215A442100F58636 /* GitHubSearchApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubSearchApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -96,7 +92,7 @@
 		4EE88447215A4D6C006BF00B /* AppDelegateRouteHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateRouteHandler.swift; sourceTree = "<group>"; };
 		4EE8844A215A4FB2006BF00B /* SearchControllerComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchControllerComponent.swift; sourceTree = "<group>"; };
 		4EE8844C215A5029006BF00B /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
-		4EE88454215A59AA006BF00B /* LogActionToConsole.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogActionToConsole.swift; sourceTree = "<group>"; };
+		4EE88454215A59AA006BF00B /* logAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = logAction.swift; sourceTree = "<group>"; };
 		4EE88456215A5A8F006BF00B /* SelectViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectViewState.swift; sourceTree = "<group>"; };
 		4EE88458215A5ADC006BF00B /* ShowEmptyViewAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowEmptyViewAction.swift; sourceTree = "<group>"; };
 		4EE8845B215A5CE0006BF00B /* GitHubSearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubSearchService.swift; sourceTree = "<group>"; };
@@ -109,13 +105,12 @@
 		4EE8846A215A7BBF006BF00B /* LoadingViewControllerComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewControllerComponent.swift; sourceTree = "<group>"; };
 		4EE8846C215A8AD2006BF00B /* ErrorViewControllerComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewControllerComponent.swift; sourceTree = "<group>"; };
 		4EE8846E215A8C34006BF00B /* InputSearchKeywordAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputSearchKeywordAction.swift; sourceTree = "<group>"; };
-		4EE88470215A924E006BF00B /* UsersReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersReducer.swift; sourceTree = "<group>"; };
+		4EE88470215A924E006BF00B /* SearchUsers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUsers.swift; sourceTree = "<group>"; };
 		4EE88472215A9436006BF00B /* SearchUsersAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUsersAction.swift; sourceTree = "<group>"; };
 		4EE88474215A9455006BF00B /* SearchReposAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchReposAction.swift; sourceTree = "<group>"; };
-		4EE88476215AA1A8006BF00B /* LogStateToConsole.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogStateToConsole.swift; sourceTree = "<group>"; };
 		4EE88479215AA534006BF00B /* SearchUsersResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUsersResponse.swift; sourceTree = "<group>"; };
 		4EE8847B215AAAE5006BF00B /* SearchReposResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchReposResponse.swift; sourceTree = "<group>"; };
-		4EE8847D215AABD9006BF00B /* ReposReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposReducer.swift; sourceTree = "<group>"; };
+		4EE8847D215AABD9006BF00B /* SearchRepos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRepos.swift; sourceTree = "<group>"; };
 		4EE8847F215AAE61006BF00B /* MakeSectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeSectionModel.swift; sourceTree = "<group>"; };
 		4EE88482215AAEDF006BF00B /* UserItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserItemModel.swift; sourceTree = "<group>"; };
 		4EE88484215AAEEF006BF00B /* RepoItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoItemModel.swift; sourceTree = "<group>"; };
@@ -128,7 +123,6 @@
 		4EE88492215ABF5E006BF00B /* LoadMoreItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadMoreItemModel.swift; sourceTree = "<group>"; };
 		4EE88494215AC132006BF00B /* LoadMoreAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadMoreAction.swift; sourceTree = "<group>"; };
 		4EE88496215AC185006BF00B /* SetPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetPage.swift; sourceTree = "<group>"; };
-		4EE88498215AC402006BF00B /* ResetFlags.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetFlags.swift; sourceTree = "<group>"; };
 		8C598AD7B7EDACCE6F8CEB51 /* Pods-GitHubSearchAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubSearchAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GitHubSearchAppTests/Pods-GitHubSearchAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		9BC63F3B1DCD4E2955BBEE87 /* Pods-GitHubSearchApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubSearchApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GitHubSearchApp/Pods-GitHubSearchApp.debug.xcconfig"; sourceTree = "<group>"; };
 		B614574327E743485BE0E4D0 /* Pods_GitHubSearchApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GitHubSearchApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -203,9 +197,8 @@
 				4EE8845F215A6323006BF00B /* Model */,
 				4EE88449215A4FA3006BF00B /* Components */,
 				4EE8844E215A589F006BF00B /* Actions */,
-				4EE88453215A598A006BF00B /* Middlewares */,
+				4E69BABC232E8AB3002AA949 /* Middlewares */,
 				4EE88451215A5973006BF00B /* Reducers */,
-				4EE88452215A5981006BF00B /* Postwares */,
 				4EE88481215AAECC006BF00B /* SectionModel */,
 				4E516349215A442100F58636 /* AppDelegate.swift */,
 				4EE8844C215A5029006BF00B /* SearchViewModel.swift */,
@@ -227,6 +220,14 @@
 				4E516360215A442200F58636 /* Info.plist */,
 			);
 			path = GitHubSearchAppTests;
+			sourceTree = "<group>";
+		};
+		4E69BABC232E8AB3002AA949 /* Middlewares */ = {
+			isa = PBXGroup;
+			children = (
+				4EE88454215A59AA006BF00B /* logAction.swift */,
+			);
+			path = Middlewares;
 			sourceTree = "<group>";
 		};
 		4EE88442215A4A6D006BF00B /* AppDelegateHanders */ = {
@@ -272,34 +273,16 @@
 		4EE88451215A5973006BF00B /* Reducers */ = {
 			isa = PBXGroup;
 			children = (
-				4EE88470215A924E006BF00B /* UsersReducer.swift */,
-				4EE8847D215AABD9006BF00B /* ReposReducer.swift */,
-			);
-			path = Reducers;
-			sourceTree = "<group>";
-		};
-		4EE88452215A5981006BF00B /* Postwares */ = {
-			isa = PBXGroup;
-			children = (
-				4EE88456215A5A8F006BF00B /* SelectViewState.swift */,
-				4EE8847F215AAE61006BF00B /* MakeSectionModel.swift */,
-				4EE88498215AC402006BF00B /* ResetFlags.swift */,
-				4E1B8A89215B44E000FCBA80 /* MakeRoute.swift */,
-				4EE88476215AA1A8006BF00B /* LogStateToConsole.swift */,
-			);
-			path = Postwares;
-			sourceTree = "<group>";
-		};
-		4EE88453215A598A006BF00B /* Middlewares */ = {
-			isa = PBXGroup;
-			children = (
-				4EE88454215A59AA006BF00B /* LogActionToConsole.swift */,
-				4E1B8A87215B44A700FCBA80 /* ResetSomeState.swift */,
+				4E1B8A89215B44E000FCBA80 /* HandleClickItem.swift */,
 				4EE8848A215AB7EB006BF00B /* SelectSearchScope.swift */,
 				4EE8848E215ABA93006BF00B /* SetKeyword.swift */,
 				4EE88496215AC185006BF00B /* SetPage.swift */,
+				4EE88470215A924E006BF00B /* SearchUsers.swift */,
+				4EE8847D215AABD9006BF00B /* SearchRepos.swift */,
+				4EE88456215A5A8F006BF00B /* SelectViewState.swift */,
+				4EE8847F215AAE61006BF00B /* MakeSectionModel.swift */,
 			);
-			path = Middlewares;
+			path = Reducers;
 			sourceTree = "<group>";
 		};
 		4EE8845A215A5CCA006BF00B /* APIService */ = {
@@ -514,26 +497,24 @@
 				4EE8848D215AB82C006BF00B /* SelectSearchScopeAction.swift in Sources */,
 				4EE88469215A7240006BF00B /* HelloViewControllerComponent.swift in Sources */,
 				4EE88465215A6D54006BF00B /* UserRepoInfo.swift in Sources */,
-				4EE88499215AC402006BF00B /* ResetFlags.swift in Sources */,
 				4EE88497215AC185006BF00B /* SetPage.swift in Sources */,
 				4E1B8A84215B356B00FCBA80 /* ClickItemAction.swift in Sources */,
 				4EE88461215A6330006BF00B /* User.swift in Sources */,
-				4EE88477215AA1A8006BF00B /* LogStateToConsole.swift in Sources */,
 				4EE8847C215AAAE5006BF00B /* SearchReposResponse.swift in Sources */,
 				4EE88480215AAE61006BF00B /* MakeSectionModel.swift in Sources */,
 				4EE88475215A9455006BF00B /* SearchReposAction.swift in Sources */,
 				4EE8846B215A7BBF006BF00B /* LoadingViewControllerComponent.swift in Sources */,
 				4E1B8A86215B39AA00FCBA80 /* SearchRoute.swift in Sources */,
-				4EE8847E215AABD9006BF00B /* ReposReducer.swift in Sources */,
+				4EE8847E215AABD9006BF00B /* SearchRepos.swift in Sources */,
 				4E1B8A8E215B4E3400FCBA80 /* AppDelegateRequiredValueChecker.swift in Sources */,
 				4EE88473215A9436006BF00B /* SearchUsersAction.swift in Sources */,
-				4E1B8A8A215B44E000FCBA80 /* MakeRoute.swift in Sources */,
+				4E1B8A8A215B44E000FCBA80 /* HandleClickItem.swift in Sources */,
 				4EE88489215AAF41006BF00B /* RepoItemComponent.swift in Sources */,
 				4EE88467215A6E55006BF00B /* EmptyViewControllerComponent.swift in Sources */,
 				4EE8846F215A8C34006BF00B /* InputSearchKeywordAction.swift in Sources */,
 				4EE8848B215AB7EB006BF00B /* SelectSearchScope.swift in Sources */,
 				4E51634C215A442100F58636 /* SearchViewController.swift in Sources */,
-				4EE88455215A59AA006BF00B /* LogActionToConsole.swift in Sources */,
+				4EE88455215A59AA006BF00B /* logAction.swift in Sources */,
 				4EE8844D215A5029006BF00B /* SearchViewModel.swift in Sources */,
 				4E1B8A82215B2F0100FCBA80 /* UIView+RxTap.swift in Sources */,
 				4EE88495215AC132006BF00B /* LoadMoreAction.swift in Sources */,
@@ -545,14 +526,13 @@
 				4E51634A215A442100F58636 /* AppDelegate.swift in Sources */,
 				4EE88463215A69F1006BF00B /* Repo.swift in Sources */,
 				4EE88493215ABF5E006BF00B /* LoadMoreItemModel.swift in Sources */,
-				4EE88471215A924E006BF00B /* UsersReducer.swift in Sources */,
+				4EE88471215A924E006BF00B /* SearchUsers.swift in Sources */,
 				4EE8847A215AA534006BF00B /* SearchUsersResponse.swift in Sources */,
 				4EE8845C215A5CE0006BF00B /* GitHubSearchService.swift in Sources */,
 				4EE88459215A5ADC006BF00B /* ShowEmptyViewAction.swift in Sources */,
 				4EE88487215AAF37006BF00B /* UserItemComponent.swift in Sources */,
 				4EE8846D215A8AD2006BF00B /* ErrorViewControllerComponent.swift in Sources */,
 				4EE88457215A5A8F006BF00B /* SelectViewState.swift in Sources */,
-				4E1B8A88215B44A700FCBA80 /* ResetSomeState.swift in Sources */,
 				4E1B8A8C215B4B2200FCBA80 /* GitHubAPIKey.swift in Sources */,
 				4EE88485215AAEEF006BF00B /* RepoItemModel.swift in Sources */,
 				4EE88446215A4B7B006BF00B /* AppDelegateLogHandler.swift in Sources */,
@@ -650,7 +630,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -706,7 +686,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

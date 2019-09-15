@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (4.9.0)
+  - BKEventBus (1.0.9)
   - BKRouter (0.0.2)
   - Kingfisher (5.7.1)
   - Moya (13.0.1):
@@ -7,7 +8,7 @@ PODS:
   - Moya/Core (13.0.1):
     - Alamofire (~> 4.1)
     - Result (~> 4.1)
-  - ReactComponentKit (2.0.3):
+  - ReactComponentKit (2.0.5):
     - RxBlocking (>= 4.2.0)
     - RxCocoa (>= 4.2.0)
     - RxSwift (>= 4.2.0)
@@ -30,6 +31,7 @@ PODS:
     - YYImage
 
 DEPENDENCIES:
+  - BKEventBus
   - BKRouter
   - Kingfisher
   - Moya
@@ -40,6 +42,7 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - BKEventBus
     - BKRouter
     - Kingfisher
     - Moya
@@ -56,10 +59,11 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: afc3e7c6db61476cb45cdd23fed06bad03bbc321
+  BKEventBus: c18a022d313e766f65fcbec073b254db4ac555b7
   BKRouter: 952411bf065f7acc9470652a36a2cfab5f00247a
   Kingfisher: 176d377ad339113c99ad4980cbae687f807e20fe
   Moya: f4a4b80ff2f8a4ffc208dfb31cd91636622fee6e
-  ReactComponentKit: 317eaff7f693f54f6788dff02e73965c675dab10
+  ReactComponentKit: 67bbab7e857a02b9a19c3d113d7583fd4ca33668
   Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
   RxBlocking: c67185d26498ea3cbe3e121917c3c16739e43123
   RxCocoa: fcf32050ac00d801f34a7f71d5e8e7f23026dcd8
@@ -70,6 +74,6 @@ SPEC CHECKSUMS:
   YYImage: 1e1b62a9997399593e4b9c4ecfbbabbf1d3f3b54
   YYWebImage: 5f7f36aee2ae293f016d418c7d6ba05c4863e928
 
-PODFILE CHECKSUM: 0aa0e1b01d2aad4e1ba14e0bc5f3c2771bcd76a1
+PODFILE CHECKSUM: 19b6afbffb32f5ff39239f790a9f17eab042c895
 
 COCOAPODS: 1.7.5

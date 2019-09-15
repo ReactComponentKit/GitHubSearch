@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import BKRedux
+import ReactComponentKit
 
 struct SelectSearchScopeAction: Action {
     let searchScope: SearchState.SearchScope
