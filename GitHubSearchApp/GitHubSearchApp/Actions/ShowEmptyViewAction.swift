@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import BKRedux
+import ReactComponentKit
 
 struct ShowEmptyViewAction: Action {
     let viewState: SearchState.ViewState = .empty

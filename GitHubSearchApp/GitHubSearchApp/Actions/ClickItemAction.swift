@@ -6,7 +6,7 @@
 //  Copyright © 2018년 Burt.K. All rights reserved.
 //
 
-import BKRedux
+import ReactComponentKit
 
 struct ClickItemAction: Action {
     let htmlUrl: String
